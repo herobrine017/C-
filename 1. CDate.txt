@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class CDate
+{
+    int dd,mm,yy;
+    public:
+    void accept();
+    void display();
+    void setDd(int);
+    int getMm();
+};
+void CDate::accept()
+{
+    cout<<"Enter Date"<<endl;
+    cin>>dd>>mm>>yy;
+}
+
+void CDate::display()
+{
+    cout<<"Date is "<<dd<<"/"<<mm<<"/"<<yy<<endl;
+}
+
+void CDate::setDd(int d)
+{
+    dd=d;
+}
+
+int CDate::getMm()
+{
+    return mm;
+}
+
+int main()
+{
+    CDate d1;
+    d1.accept();
+    d1.display();
+    d1.setDd(22);
+    d1.display();
+    cout<<"Month is "<<d1.getMm();
+    return 0;
+}

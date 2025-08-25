@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void Maximum(int*[],int);
+};
+
+void A::Maximum(int*a[],int n)
+{
+    int max=(*(a+0));
+    for(int i=0;i<5;i++)
+    {
+        if((*(a+i))>max)
+        {
+            max=(*(a+i));
+        }
+    }
+    cout<<"Maximum number is "<<max;
+}
+
+int main()
+{
+    int a[5]={40,2,70,5,4};
+    int n=sizeof(a)/sizeof(a[0]);
+    A obj;
+    obj.Maximum(&a,n);
+}
